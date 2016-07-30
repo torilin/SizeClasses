@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SizeClasses" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +17,106 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="KYOTO" translatesAutoresizingMaskIntoConstraints="NO" id="obG-v9-068">
+                                <rect key="frame" x="180" y="63" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="D5L-6s-XEw"/>
+                                    <constraint firstAttribute="height" constant="162" id="THK-jf-Kfy"/>
+                                    <constraint firstAttribute="height" constant="222" id="fJ9-no-8yf"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="D5L-6s-XEw"/>
+                                        <exclude reference="THK-jf-Kfy"/>
+                                        <exclude reference="fJ9-no-8yf"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="D5L-6s-XEw"/>
+                                        <include reference="THK-jf-Kfy"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular" misplaced="YES">
+                                    <rect key="frame" x="20" y="28" width="560" height="222"/>
+                                    <mask key="constraints">
+                                        <include reference="fJ9-no-8yf"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="15" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sqm-g7-fzs">
+                                <rect key="frame" x="40" y="247" width="520" height="206"/>
+                                <string key="text">There are few chefs in the world who manage to successfully balance deep tradition, genuine innovation, and exquisite presentation. Yoshihiro Murata is one of them.
+
+Murata is the third generation in his family to cook at Kikunoi, a century-old ryotei, or restaurant, in Kyoto. After traveling through France and then working at Kamome, he returned to his family and worked alongside his father at Kikunoi. In 1989, Murata opened Kikunoi Kiyamachi and won critical acclaim for his new style of kaiseki cuisine.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular" misplaced="YES">
+                                    <rect key="frame" x="20" y="258" width="560" height="226"/>
+                                </variation>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="obG-v9-068" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="3Xn-yR-cPh"/>
+                            <constraint firstItem="obG-v9-068" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="6Ju-HL-gAj"/>
+                            <constraint firstItem="obG-v9-068" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="8kN-kH-wT8"/>
+                            <constraint firstItem="Sqm-g7-fzs" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="OlP-XK-BSt"/>
+                            <constraint firstItem="obG-v9-068" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="PDt-49-RWQ"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Sqm-g7-fzs" secondAttribute="bottom" constant="20" id="X3n-4K-Dte"/>
+                            <constraint firstItem="Sqm-g7-fzs" firstAttribute="leading" secondItem="obG-v9-068" secondAttribute="trailing" constant="21" id="eMt-CQ-eX2"/>
+                            <constraint firstItem="Sqm-g7-fzs" firstAttribute="top" secondItem="obG-v9-068" secondAttribute="bottom" constant="8" id="f6g-4C-pnG"/>
+                            <constraint firstItem="obG-v9-068" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="ofT-JD-rlJ"/>
+                            <constraint firstItem="Sqm-g7-fzs" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="sEK-wW-XF6"/>
+                            <constraint firstItem="Sqm-g7-fzs" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="sdR-YZ-yLb"/>
+                            <constraint firstItem="Sqm-g7-fzs" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="uEe-VP-i46"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="3Xn-yR-cPh"/>
+                                <exclude reference="6Ju-HL-gAj"/>
+                                <exclude reference="8kN-kH-wT8"/>
+                                <exclude reference="PDt-49-RWQ"/>
+                                <exclude reference="ofT-JD-rlJ"/>
+                                <exclude reference="OlP-XK-BSt"/>
+                                <exclude reference="eMt-CQ-eX2"/>
+                                <exclude reference="f6g-4C-pnG"/>
+                                <exclude reference="sEK-wW-XF6"/>
+                                <exclude reference="sdR-YZ-yLb"/>
+                                <exclude reference="uEe-VP-i46"/>
+                                <exclude reference="X3n-4K-Dte"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact">
+                            <mask key="constraints">
+                                <include reference="3Xn-yR-cPh"/>
+                                <include reference="6Ju-HL-gAj"/>
+                                <include reference="OlP-XK-BSt"/>
+                                <include reference="eMt-CQ-eX2"/>
+                                <include reference="sEK-wW-XF6"/>
+                                <include reference="X3n-4K-Dte"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular">
+                            <mask key="constraints">
+                                <include reference="8kN-kH-wT8"/>
+                                <include reference="PDt-49-RWQ"/>
+                                <include reference="ofT-JD-rlJ"/>
+                                <include reference="f6g-4C-pnG"/>
+                                <include reference="sdR-YZ-yLb"/>
+                                <include reference="uEe-VP-i46"/>
+                            </mask>
+                        </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="305" y="348"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="KYOTO" width="2560" height="1600"/>
+    </resources>
 </document>
